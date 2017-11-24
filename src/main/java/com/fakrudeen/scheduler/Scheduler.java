@@ -38,7 +38,8 @@ public class Scheduler implements IMaster {
      */
     @Override
     public void join(String workerId) {
-        workerToHeartBeatMap.put(workerId, System.currentTimeMillis());
+        LOGGER.log(Level.INFO, "Join worker:"+workerId);
+        heartBeat(workerId); // heart beat the worker
     }
 
     /**
@@ -47,6 +48,7 @@ public class Scheduler implements IMaster {
      */
     @Override
     public void leave(String workerId) {
+        LOGGER.log(Level.INFO, "Leave worker:"+workerId);
         if(workerToHeartBeatMap.containsKey(workerId)) {
             workerToHeartBeatMap.remove(workerId);
         }
@@ -58,6 +60,7 @@ public class Scheduler implements IMaster {
      */
     @Override
     public void heartBeat(String workerId) {
+        LOGGER.log(Level.INFO, "Heart beat worker:"+workerId);
         workerToHeartBeatMap.put(workerId, System.currentTimeMillis());
     }
 
@@ -68,6 +71,15 @@ public class Scheduler implements IMaster {
      */
     @Override
     public Task schedule(String workerId) {
+        if(!workerToHeartBeatMap.containsKey(workerId)) {
+            join(workerId);
+        } else {
+            heartBeat(workerId); // heart beat the worker
+        }
+        if(workerToTaskMap.containsKey(workerId)) { //worker needs to finish the current job first!
+            LOGGER.log(Level.WARNING, "Worker is requesting task without finishing the current one:"+workerId);
+            return null;
+        }
         List<Task> tasks = taskDB.getUnScheduledTasks();
         Task task = null;
         if(null != tasks && 0 != tasks.size()) {
@@ -86,6 +98,7 @@ public class Scheduler implements IMaster {
      */
     @Override
     public void finished(String workerId, String task) {
+        LOGGER.log(Level.INFO, "Worker "+workerId+" completed task:"+task);
         taskDB.updateTask(task, ITaskDB.Status.success);
         workerToTaskMap.remove(workerId);
     }
@@ -94,14 +107,21 @@ public class Scheduler implements IMaster {
      * Handles dead worker tasks. This enables the tasks to be rescheduled at other workers instead of waiting forever.
      */
     private void handleDeadWorkers() {
+        List<String> workersToRemove = new ArrayList<>();
         for(String worker:workerToHeartBeatMap.keySet()) {
-            if(System.currentTimeMillis()-workerToHeartBeatMap.get(worker) >  2*PERIOD_MS) {
+            if(System.currentTimeMillis() - workerToHeartBeatMap.get(worker) >  2*PERIOD_MS) {
+                LOGGER.log(Level.WARNING, "Removing dead worker:"+worker);
                 if(workerToTaskMap.containsKey(worker)) {
                     String taskName = workerToTaskMap.get(worker);
                     taskDB.updateTask(taskName, ITaskDB.Status.killed);
                     workerToTaskMap.remove(worker);
                 }
+                workersToRemove.add(worker);
             }
+        }
+
+        for(String worker:workersToRemove) { // this needs to be done here to avoid concurrent modification to iterating collection
+            leave(worker);
         }
     }
 
