@@ -65,9 +65,9 @@ public class MongoTaskDB implements ITaskDB {
         try {
             List<Task> tasks = new ArrayList<>();
             MongoCollection<Document> taskDocuments = getTaskDocuments();
-            BasicDBObject neQuery = new BasicDBObject();
-            neQuery.put(STATUS_FIELD, new BasicDBObject(IN_OPERATOR, statusList));
-            for (Document taskDocument : taskDocuments.find(neQuery)) {
+            BasicDBObject inQuery = new BasicDBObject();
+            inQuery.put(STATUS_FIELD, new BasicDBObject(IN_OPERATOR, statusList));
+            for (Document taskDocument : taskDocuments.find(inQuery)) {
                 tasks.add(new Task(taskDocument.getString(TASKNAME_FIELD), taskDocument.getDouble(SLEEPTIME_IN_SEC_FIELD).intValue(),  taskDocument.containsKey(HOST_FIELD)?taskDocument.getString(HOST_FIELD):null));
             }
             return tasks;

@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Main Scheduler
@@ -11,6 +13,8 @@ import java.util.concurrent.TimeUnit;
  * Date: 23 Nov 2017
  */
 public class Scheduler implements IMaster {
+    private static final Logger LOGGER = Logger.getLogger(Scheduler.class.getName());
+
     public static final int INITIAL_DELAY_MS = 5000;
     public static final int PERIOD_MS = 60000;
     private ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1);
@@ -71,6 +75,7 @@ public class Scheduler implements IMaster {
             taskDB.updateTaskAndHost(task.getTaskName(), ITaskDB.Status.running, workerId);
             workerToTaskMap.put(workerId, task.getTaskName());
         }
+        LOGGER.log(Level.INFO, "Scheduled for worker:"+workerId+" task:"+task);
         return task;
     }
 
