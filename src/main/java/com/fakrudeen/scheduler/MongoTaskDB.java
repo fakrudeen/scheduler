@@ -30,10 +30,14 @@ public class MongoTaskDB implements ITaskDB {
     public static final String IN_OPERATOR = "$in";
     public static final String UPDATE_OPERATOR = "$set";
 
-    private MongoClient mongoClient = new MongoClient();
+    private MongoClient mongoClient;
 
     public MongoTaskDB() {
-        mongoClient = new MongoClient(new MongoClientURI(DB_CONNECTION_STRING));
+        this(new MongoClient(new MongoClientURI(DB_CONNECTION_STRING)));
+    }
+
+    public MongoTaskDB(MongoClient mongoClient) {
+        this.mongoClient = mongoClient;
     }
 
     /**
@@ -64,7 +68,7 @@ public class MongoTaskDB implements ITaskDB {
             BasicDBObject neQuery = new BasicDBObject();
             neQuery.put(STATUS_FIELD, new BasicDBObject(IN_OPERATOR, statusList));
             for (Document taskDocument : taskDocuments.find(neQuery)) {
-                tasks.add(new Task(taskDocument.getString(TASKNAME_FIELD), taskDocument.getDouble(SLEEPTIME_IN_SEC_FIELD).intValue(), taskDocument.getString(HOST_FIELD)));
+                tasks.add(new Task(taskDocument.getString(TASKNAME_FIELD), taskDocument.getDouble(SLEEPTIME_IN_SEC_FIELD).intValue(),  taskDocument.containsKey(HOST_FIELD)?taskDocument.getString(HOST_FIELD):null));
             }
             return tasks;
         }catch (Exception e) {

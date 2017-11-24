@@ -14,11 +14,16 @@ public class Scheduler implements IMaster {
     public static final int INITIAL_DELAY_MS = 5000;
     public static final int PERIOD_MS = 60000;
     private ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1);
-    private ITaskDB taskDB = new MongoTaskDB();
+    private ITaskDB taskDB;
     private Map<String, Long> workerToHeartBeatMap = new HashMap<>();
     private Map<String, String> workerToTaskMap = new HashMap<>();
 
     public Scheduler() {
+        this(new MongoTaskDB());
+    }
+
+    public Scheduler(ITaskDB taskDB) {
+        this.taskDB = taskDB;
         initializeMaps();
         executorService.scheduleAtFixedRate(this::handleDeadWorkers, INITIAL_DELAY_MS, PERIOD_MS, TimeUnit.MILLISECONDS);
     }
