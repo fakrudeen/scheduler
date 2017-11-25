@@ -13,4 +13,4 @@ ADD Scheduler.jar .
 EXPOSE 8000
 
 # Define default command.
-CMD ["java", "-cp", "Scheduler.jar", "com.fakrudeen.scheduler.WebService"]
+CMD ["java", "-cp", "Scheduler.jar", "com.fakrudeen.scheduler.WebService", "8000"]
