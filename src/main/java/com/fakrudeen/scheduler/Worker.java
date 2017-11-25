@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.Charset;
+import java.util.Random;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -29,6 +30,7 @@ public class Worker {
     public static final String PATH_PREFIX = "/scheduler/";
     public static final String PROTOCOL = "http://";
     public static final int HEARTBEAT_PERIOD_MS = 15000;
+    public static final int RANDOMIZATION_MAX_INTERVAL_MS = 5000;
     private static Gson gson = new Gson();
     private static volatile boolean enabled;
 
@@ -144,8 +146,9 @@ public class Worker {
     private static void setupHeartBeat(String master, String workerId) {
         executorService.scheduleAtFixedRate(() -> {
             try {
+                Thread.sleep(new Random().nextInt(RANDOMIZATION_MAX_INTERVAL_MS));
                 heartbeat(master, workerId);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 LOGGER.log(Level.WARNING, e.getMessage());
             }
         }, HEARTBEAT_PERIOD_MS, HEARTBEAT_PERIOD_MS, TimeUnit.MILLISECONDS);
