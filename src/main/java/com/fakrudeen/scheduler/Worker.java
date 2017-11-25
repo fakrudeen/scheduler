@@ -7,6 +7,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.nio.charset.Charset;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,8 +28,11 @@ public class Worker {
     public static final int BUFFER_SIZE = 1024;
     public static final String PATH_PREFIX = "/scheduler/";
     public static final String PROTOCOL = "http://";
+    public static final int HEARTBEAT_PERIOD_MS = 15000;
     private static Gson gson = new Gson();
     private static volatile boolean enabled;
+
+    private static ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1);
 
     public static void main(String[] args) throws IOException, InterruptedException {
         if(1 != args.length) {
@@ -38,6 +44,7 @@ public class Worker {
         String master = args[0];
         String workerId = System.getenv(HOSTNAME_ENV_VARIABLE);
         join(master, workerId);
+        setupHeartBeat(master, workerId);
         enabled = true;
         while(enabled) {
             try {
@@ -53,6 +60,7 @@ public class Worker {
                 Thread.sleep(WORKER_FAILURE_DELAY_MS);
             }
         }
+
         leave(master, workerId);
     }
 
@@ -66,6 +74,10 @@ public class Worker {
 
     private static void leave(String master, String workerId) throws IOException {
         handleMethod(master, workerId, null, "leave");
+    }
+
+    private static void heartbeat(String master, String workerId) throws IOException {
+        handleMethod(master, workerId, null, "heartbeat");
     }
 
     private static void finish(String master, String workerId, Task task) throws IOException {
@@ -122,5 +134,20 @@ public class Worker {
             }
         }
         return builder.toString();
+    }
+
+    /**
+     * Setup heart beat background process
+     * @param master Master host
+     * @param workerId - this worker
+     */
+    private static void setupHeartBeat(String master, String workerId) {
+        executorService.scheduleAtFixedRate(() -> {
+            try {
+                heartbeat(master, workerId);
+            } catch (IOException e) {
+                LOGGER.log(Level.WARNING, e.getMessage());
+            }
+        }, HEARTBEAT_PERIOD_MS, HEARTBEAT_PERIOD_MS, TimeUnit.MILLISECONDS);
     }
 }
