@@ -5,5 +5,5 @@
  */
 var db = connect('127.0.0.1:27017/scheduler');
 for (i = 0; i < 100; i++) {
-    db.tasks.insert({'taskname':'task'+i, 'sleeptime': Math.floor(Math.random()*10000),'status':'created'});
+    db.tasks.insert({'taskname':'task'+i, 'sleeptime': Math.floor(Math.random()*100),'status':'created'});
 }
