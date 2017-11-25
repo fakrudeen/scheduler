@@ -1,0 +1,5 @@
+Fakrudeens-MacBook-Pro:worker fakrudeen$ docker run  --net="host" -h fakrudeen3 -it --rm worker
+Nov 25, 2017 1:28:02 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task35', sleepTimeInSec:83, getHost:null}
+Nov 25, 2017 1:29:26 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task39', sleepTimeInSec:55, getHost:null}

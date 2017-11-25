@@ -1,0 +1,18 @@
+just afer restart:
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a4"), "taskname" : "task40", "sleeptime" : 84, "status" : "running", "host" : "fakrudeen2" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a5"), "taskname" : "task41", "sleeptime" : 8, "status" : "success", "host" : "fakrudeen3" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a6"), "taskname" : "task42", "sleeptime" : 77, "status" : "running", "host" : "fakrudeen" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a7"), "taskname" : "task43", "sleeptime" : 48, "status" : "running", "host" : "fakrudeen3" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a8"), "taskname" : "task44", "sleeptime" : 98, "status" : "created" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a9"), "taskname" : "task45", "sleeptime" : 80, "status" : "created" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75aa"), "taskname" : "task46", "sleeptime" : 38, "status" : "created" }
+
+after waiting sometime after restart:
+
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a4"), "taskname" : "task40", "sleeptime" : 84, "status" : "success", "host" : "fakrudeen2" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a5"), "taskname" : "task41", "sleeptime" : 8, "status" : "success", "host" : "fakrudeen3" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a6"), "taskname" : "task42", "sleeptime" : 77, "status" : "success", "host" : "fakrudeen" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a7"), "taskname" : "task43", "sleeptime" : 48, "status" : "success", "host" : "fakrudeen3" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a8"), "taskname" : "task44", "sleeptime" : 98, "status" : "running", "host" : "fakrudeen3" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75a9"), "taskname" : "task45", "sleeptime" : 80, "status" : "running", "host" : "fakrudeen2" }
+{ "_id" : ObjectId("5a18c3b37167af9bea3b75aa"), "taskname" : "task46", "sleeptime" : 38, "status" : "running", "host" : "fakrudeen" }

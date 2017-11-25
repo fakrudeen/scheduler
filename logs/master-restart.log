@@ -1,0 +1,31 @@
+^CFakrudeens-MacBook-Pro:master fakrudeen$ docker run  --net="host"  -it --rm master
+Nov 25, 2017 1:30:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Nov 25, 2017 1:30:26 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:88}] to localhost:27017
+Nov 25, 2017 1:30:26 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Nov 25, 2017 1:30:26 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1148700}
+Nov 25, 2017 1:30:26 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:89}] to localhost:27017
+Nov 25, 2017 1:30:27 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task38
+Nov 25, 2017 1:30:27 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task38
+Nov 25, 2017 1:30:28 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:30:28 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:30:28 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task42', sleepTimeInSec:77, getHost:null}
+Nov 25, 2017 1:30:30 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen3/task41
+Nov 25, 2017 1:30:30 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen3 completed task:task41
+Nov 25, 2017 1:30:31 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen3
+Nov 25, 2017 1:30:31 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen3
+Nov 25, 2017 1:30:31 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen3 task:{taskName:'task43', sleepTimeInSec:48, getHost:null}

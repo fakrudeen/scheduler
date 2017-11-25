@@ -1,0 +1,31 @@
+Fakrudeens-MacBook-Pro:worker fakrudeen$ docker run  --net="host" -h fakrudeen -it --rm worker
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task1', sleepTimeInSec:70, getHost:null}
+Nov 25, 2017 1:15:07 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task2', sleepTimeInSec:1, getHost:null}
+Nov 25, 2017 1:15:09 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task3', sleepTimeInSec:71, getHost:null}
+Nov 25, 2017 1:16:21 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task7', sleepTimeInSec:3, getHost:null}
+Nov 25, 2017 1:16:25 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task8', sleepTimeInSec:17, getHost:null}
+Nov 25, 2017 1:16:43 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task9', sleepTimeInSec:35, getHost:null}
+Nov 25, 2017 1:17:20 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task10', sleepTimeInSec:73, getHost:null}
+Nov 25, 2017 1:18:34 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task15', sleepTimeInSec:75, getHost:null}
+Nov 25, 2017 1:19:50 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task18', sleepTimeInSec:82, getHost:null}
+Nov 25, 2017 1:21:13 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task20', sleepTimeInSec:39, getHost:null}
+Nov 25, 2017 1:21:53 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task21', sleepTimeInSec:45, getHost:null}
+Nov 25, 2017 1:22:39 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task23', sleepTimeInSec:92, getHost:null}
+Nov 25, 2017 1:24:12 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task27', sleepTimeInSec:86, getHost:null}
+Nov 25, 2017 1:25:39 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task29', sleepTimeInSec:62, getHost:null}
+Nov 25, 2017 1:26:42 AM com.fakrudeen.scheduler.Worker main
+INFO: Task:{taskName:'task31', sleepTimeInSec:57, getHost:null}

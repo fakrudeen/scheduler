@@ -1,0 +1,422 @@
+Fakrudeens-MacBook-Pro:master fakrudeen$ docker run  --net="host"  -it --rm master
+Nov 25, 2017 1:06:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Nov 25, 2017 1:06:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Nov 25, 2017 1:06:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:84}] to localhost:27017
+Nov 25, 2017 1:06:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=696700}
+Nov 25, 2017 1:06:25 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:85}] to localhost:27017
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/join/fakrudeen2
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.Scheduler join
+INFO: Join worker:fakrudeen2
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:06:39 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task0', sleepTimeInSec:4, getHost:null}
+Nov 25, 2017 1:06:43 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:06:43 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:06:44 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:06:44 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:06:44 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task1', sleepTimeInSec:2, getHost:null}
+Nov 25, 2017 1:06:46 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:06:46 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:06:47 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:06:47 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:06:47 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task2', sleepTimeInSec:86, getHost:null}
+Nov 25, 2017 1:08:13 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:08:13 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:08:14 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:08:14 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:08:14 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task3', sleepTimeInSec:68, getHost:null}
+Nov 25, 2017 1:09:22 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:09:22 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:09:23 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:09:23 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:09:23 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task4', sleepTimeInSec:84, getHost:null}
+Nov 25, 2017 1:10:47 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:10:47 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:10:48 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:10:48 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:10:48 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task5', sleepTimeInSec:98, getHost:null}
+Nov 25, 2017 1:12:26 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2
+Nov 25, 2017 1:12:26 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:null
+Nov 25, 2017 1:12:27 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:12:27 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:12:27 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task6', sleepTimeInSec:61, getHost:null}
+^CFakrudeens-MacBook-Pro:master fakrudeen$
+Fakrudeens-MacBook-Pro:master fakrudeen$ docker build -t master .
+Sending build context to Docker daemon  3.938MB
+Step 1/4 : FROM java
+ ---> d23bdf5b1b1b
+Step 2/4 : ADD Scheduler.jar .
+ ---> dd35b6a708f1
+Step 3/4 : EXPOSE 8000
+ ---> Running in 58468c0ecc15
+ ---> 5655c2dae07c
+Removing intermediate container 58468c0ecc15
+Step 4/4 : CMD java -cp Scheduler.jar com.fakrudeen.scheduler.WebService 8000
+ ---> Running in b78caa706bf5
+ ---> 78c29daec777
+Removing intermediate container b78caa706bf5
+Successfully built 78c29daec777
+Successfully tagged master:latest
+Fakrudeens-MacBook-Pro:master fakrudeen$ docker run  --net="host"  -it --rm master
+Nov 25, 2017 1:13:39 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Nov 25, 2017 1:13:40 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+Nov 25, 2017 1:13:40 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:86}] to localhost:27017
+Nov 25, 2017 1:13:40 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 10]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2693400}
+Nov 25, 2017 1:13:40 AM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:87}] to localhost:27017
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/join/fakrudeen2
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.Scheduler join
+INFO: Join worker:fakrudeen2
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:13:46 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task0', sleepTimeInSec:85, getHost:null}
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/join/fakrudeen
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.Scheduler join
+INFO: Join worker:fakrudeen
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:13:56 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task1', sleepTimeInSec:70, getHost:null}
+Nov 25, 2017 1:15:06 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task1
+Nov 25, 2017 1:15:06 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task1
+Nov 25, 2017 1:15:07 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:15:07 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:15:07 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task2', sleepTimeInSec:1, getHost:null}
+Nov 25, 2017 1:15:08 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task2
+Nov 25, 2017 1:15:08 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task2
+Nov 25, 2017 1:15:09 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:15:09 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:15:09 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task3', sleepTimeInSec:71, getHost:null}
+Nov 25, 2017 1:15:11 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task0
+Nov 25, 2017 1:15:11 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task0
+Nov 25, 2017 1:15:12 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:15:12 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:15:12 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task4', sleepTimeInSec:29, getHost:null}
+Nov 25, 2017 1:15:41 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task4
+Nov 25, 2017 1:15:41 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task4
+Nov 25, 2017 1:15:42 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:15:42 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:15:42 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task5', sleepTimeInSec:33, getHost:null}
+Nov 25, 2017 1:16:15 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task5
+Nov 25, 2017 1:16:15 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task5
+Nov 25, 2017 1:16:16 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:16:16 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:16:16 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task6', sleepTimeInSec:73, getHost:null}
+Nov 25, 2017 1:16:20 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task3
+Nov 25, 2017 1:16:20 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task3
+Nov 25, 2017 1:16:21 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:16:21 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:16:21 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task7', sleepTimeInSec:3, getHost:null}
+Nov 25, 2017 1:16:24 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task7
+Nov 25, 2017 1:16:24 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task7
+Nov 25, 2017 1:16:25 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:16:25 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:16:25 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task8', sleepTimeInSec:17, getHost:null}
+Nov 25, 2017 1:16:42 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task8
+Nov 25, 2017 1:16:42 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task8
+Nov 25, 2017 1:16:43 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:16:43 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:16:43 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task9', sleepTimeInSec:35, getHost:null}
+Nov 25, 2017 1:17:18 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task9
+Nov 25, 2017 1:17:18 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task9
+Nov 25, 2017 1:17:20 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:17:20 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:17:20 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task10', sleepTimeInSec:73, getHost:null}
+Nov 25, 2017 1:17:29 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task6
+Nov 25, 2017 1:17:29 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task6
+Nov 25, 2017 1:17:30 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:17:30 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:17:30 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task11', sleepTimeInSec:3, getHost:null}
+Nov 25, 2017 1:17:33 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task11
+Nov 25, 2017 1:17:33 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task11
+Nov 25, 2017 1:17:34 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:17:34 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:17:34 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task12', sleepTimeInSec:12, getHost:null}
+Nov 25, 2017 1:17:46 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task12
+Nov 25, 2017 1:17:46 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task12
+Nov 25, 2017 1:17:47 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:17:47 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:17:47 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task13', sleepTimeInSec:3, getHost:null}
+Nov 25, 2017 1:17:50 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task13
+Nov 25, 2017 1:17:50 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task13
+Nov 25, 2017 1:17:51 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:17:51 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:17:51 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task14', sleepTimeInSec:56, getHost:null}
+Nov 25, 2017 1:18:33 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task10
+Nov 25, 2017 1:18:33 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task10
+Nov 25, 2017 1:18:34 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:18:34 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:18:34 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task15', sleepTimeInSec:75, getHost:null}
+Nov 25, 2017 1:18:47 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task14
+Nov 25, 2017 1:18:47 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task14
+Nov 25, 2017 1:18:48 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:18:48 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:18:48 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task16', sleepTimeInSec:52, getHost:null}
+Nov 25, 2017 1:19:40 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task16
+Nov 25, 2017 1:19:40 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task16
+Nov 25, 2017 1:19:41 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:19:41 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:19:41 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task17', sleepTimeInSec:81, getHost:null}
+Nov 25, 2017 1:19:49 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task15
+Nov 25, 2017 1:19:49 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task15
+Nov 25, 2017 1:19:50 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:19:50 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:19:50 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task18', sleepTimeInSec:82, getHost:null}
+Nov 25, 2017 1:21:02 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task17
+Nov 25, 2017 1:21:02 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task17
+Nov 25, 2017 1:21:03 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:21:03 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:21:03 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task19', sleepTimeInSec:92, getHost:null}
+Nov 25, 2017 1:21:12 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task18
+Nov 25, 2017 1:21:12 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task18
+Nov 25, 2017 1:21:13 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:21:13 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:21:13 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task20', sleepTimeInSec:39, getHost:null}
+Nov 25, 2017 1:21:52 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task20
+Nov 25, 2017 1:21:52 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task20
+Nov 25, 2017 1:21:53 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:21:53 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:21:53 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task21', sleepTimeInSec:45, getHost:null}
+Nov 25, 2017 1:22:35 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task19
+Nov 25, 2017 1:22:35 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task19
+Nov 25, 2017 1:22:36 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:22:36 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:22:36 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task22', sleepTimeInSec:5, getHost:null}
+Nov 25, 2017 1:22:38 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task21
+Nov 25, 2017 1:22:38 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task21
+Nov 25, 2017 1:22:39 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:22:39 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:22:39 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task23', sleepTimeInSec:92, getHost:null}
+Nov 25, 2017 1:22:41 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task22
+Nov 25, 2017 1:22:41 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task22
+Nov 25, 2017 1:22:42 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:22:42 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:22:42 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task24', sleepTimeInSec:78, getHost:null}
+Nov 25, 2017 1:24:00 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task24
+Nov 25, 2017 1:24:00 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task24
+Nov 25, 2017 1:24:01 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:24:01 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:24:01 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task25', sleepTimeInSec:9, getHost:null}
+Nov 25, 2017 1:24:10 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task25
+Nov 25, 2017 1:24:10 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task25
+Nov 25, 2017 1:24:11 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task23
+Nov 25, 2017 1:24:11 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task23
+Nov 25, 2017 1:24:11 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:24:11 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:24:11 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task26', sleepTimeInSec:82, getHost:null}
+Nov 25, 2017 1:24:12 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:24:12 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:24:12 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task27', sleepTimeInSec:86, getHost:null}
+Nov 25, 2017 1:25:33 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task26
+Nov 25, 2017 1:25:33 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task26
+Nov 25, 2017 1:25:34 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:25:34 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen2
+Nov 25, 2017 1:25:34 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen2 task:{taskName:'task28', sleepTimeInSec:19, getHost:null}
+Nov 25, 2017 1:25:38 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen/task27
+Nov 25, 2017 1:25:38 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen completed task:task27
+Nov 25, 2017 1:25:39 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen
+Nov 25, 2017 1:25:39 AM com.fakrudeen.scheduler.Scheduler heartBeat
+INFO: Heart beat worker:fakrudeen
+Nov 25, 2017 1:25:39 AM com.fakrudeen.scheduler.Scheduler schedule
+INFO: Scheduled for worker:fakrudeen task:{taskName:'task29', sleepTimeInSec:62, getHost:null}
+^[[B^[[BNov 25, 2017 1:25:53 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/finished/fakrudeen2/task28
+Nov 25, 2017 1:25:53 AM com.fakrudeen.scheduler.Scheduler finished
+INFO: Worker fakrudeen2 completed task:task28
+Nov 25, 2017 1:25:54 AM com.fakrudeen.scheduler.WebService$RequestHandler handle
+INFO: /scheduler/schedule/fakrudeen2
+Nov 25, 2017 1:25:54 AM com.fakrudeen.scheduler.Scheduler heartBeat
