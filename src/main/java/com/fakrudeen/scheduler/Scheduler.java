@@ -20,7 +20,7 @@ public class Scheduler implements IMaster {
     private ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1);
     private ITaskDB taskDB;
     private Map<String, Long> workerToHeartBeatMap = new HashMap<>();
-    private Map<String, String> workerToTaskMap = new HashMap<>();
+    private Map<String, Task> workerToTaskMap = new HashMap<>();
 
     public Scheduler() {
         this(new MongoTaskDB());
@@ -77,15 +77,16 @@ public class Scheduler implements IMaster {
             heartBeat(workerId); // heart beat the worker
         }
         if(workerToTaskMap.containsKey(workerId)) { //worker needs to finish the current job first!
-            LOGGER.log(Level.WARNING, "Worker is requesting task without finishing the current one:"+workerId);
-            return null;
+            LOGGER.log(Level.WARNING, "Worker is requesting task without finishing the current one, returning the same one:"+workerId);
+            return workerToTaskMap.get(workerId);
         }
+
         List<Task> tasks = taskDB.getUnScheduledTasks();
         Task task = null;
         if(null != tasks && 0 != tasks.size()) {
             task = tasks.get(0);
             taskDB.updateTaskAndHost(task.getTaskName(), ITaskDB.Status.running, workerId);
-            workerToTaskMap.put(workerId, task.getTaskName());
+            workerToTaskMap.put(workerId, task);
         }
         LOGGER.log(Level.INFO, "Scheduled for worker:"+workerId+" task:"+task);
         return task;
@@ -112,7 +113,7 @@ public class Scheduler implements IMaster {
             if(System.currentTimeMillis() - workerToHeartBeatMap.get(worker) >  2*PERIOD_MS) {
                 LOGGER.log(Level.WARNING, "Removing dead worker:"+worker);
                 if(workerToTaskMap.containsKey(worker)) {
-                    String taskName = workerToTaskMap.get(worker);
+                    String taskName = workerToTaskMap.get(worker).getTaskName();
                     taskDB.updateTask(taskName, ITaskDB.Status.killed);
                     workerToTaskMap.remove(worker);
                 }
@@ -132,7 +133,7 @@ public class Scheduler implements IMaster {
         List<Task> runningTasks = taskDB.getRunningTasks();
         for(Task task:runningTasks) {
             String worker = task.getHost();
-            workerToTaskMap.put(worker, task.getTaskName());
+            workerToTaskMap.put(worker, task);
             workerToHeartBeatMap.put(worker, System.currentTimeMillis());
         }
     }

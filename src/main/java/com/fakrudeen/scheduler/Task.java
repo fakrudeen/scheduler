@@ -1,4 +1,5 @@
 package com.fakrudeen.scheduler;
+
 /**
  * Scheduler task
  */
@@ -6,6 +7,10 @@ public class Task {
     private String taskName;
     private int sleepTimeInSec;
     private String host;
+
+    public Task() {
+
+    }
 
     public Task(String taskName, int sleepTimeInSec, String host) {
         this.taskName = taskName;
